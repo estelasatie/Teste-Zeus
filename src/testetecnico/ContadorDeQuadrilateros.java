@@ -14,10 +14,15 @@ public class ContadorDeQuadrilateros {
 		int colunas = scanner.nextInt();
 		
 
-		if (linhas < colunas) {
+		if (linhas <= colunas && linhas % 2 == 0) {
 			System.out.println("o número de quadriláteros é: " + linhas/2);
-		} else {
+		} else if (linhas < colunas && linhas%2==1){
+			System.out.println("o número de quadriláteros é: " + ((colunas/2) + 1));
+		} else if (colunas < linhas && colunas%2==0) {
 			System.out.println("o número de quadriláteros é: " + colunas/2);
+		}else {
+			System.out.println("o número de quadriláteros é: " + ((colunas/2) + 1));
 		}
+		
 	}
 }
